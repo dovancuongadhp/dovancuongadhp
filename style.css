@@ -1,0 +1,64 @@
+*{
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.wrapper{
+    /* display: flex; */
+}
+.password{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.password input{
+    background-color: white;
+    padding: 10px;
+    width: 150px;
+    outline: none;
+    border: 1px solid rgb(230, 0, 65);
+}
+.text__alert{
+  text-align: center;
+}
+#btn_opendoor{
+  background-color:rgb(230, 0, 65) ;
+  color: white;
+  outline: none;
+  border: none;
+}
+#demo{
+  color: rgb(230, 0, 65);
+}
+.backDoor
+{
+  /* background-color: #333; */
+  background: url('img/heart_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  width:200px;
+  height:400px;
+  margin: 0 auto;
+  margin-top:50px;
+  top: 40px;
+}
+
+.door
+{
+  background-color: rgb(255, 116, 141);
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:200px;
+  height:400px;
+ 
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 0.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
