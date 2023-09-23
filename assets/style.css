@@ -43,12 +43,12 @@
   height:400px;
   margin: 0 auto;
   margin-top:50px;
-  top: 40px;
+  top: 20px;
 }
 
 .door
 {
-  background-color: rgb(255, 116, 141);
+  background-color: rgb(156, 99, 255);
   position:absolute;
   top:0px;
   left:0px;
