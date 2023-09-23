@@ -1,27 +1,44 @@
-const PASSWORD ="thuyduong";
+const PASSWORD ="12345";
+let isOpen = false
+var btn_opendoor = document.getElementById("btn_opendoor")
+var notifi = document.getElementById("demo")
 
 var element = document.querySelector(".door");
 element.addEventListener("click", alertDoor);
+
 function alertDoor(){
-    document.getElementById("demo").innerHTML = "Vui lòng nhập mật khẩu";
+    notifi.innerHTML = "Vui lòng nhập mật khẩu";
 }
 function toggleDoor() {
     element.classList.toggle("doorOpen");
+    playVideo()
 }
-let isOpen = false
+
+// play video
+
+function playVideo() {
+    var video = document.getElementById("video_tiktok");
+    
+    if (video.paused) {
+        video.play(); // Nếu video đang dừng thì chạy nó
+    } else {
+        video.pause(); // Nếu video đang chạy thì dừng nó
+    }
+}
+
 function myFunction() {
     var getpassword = document.getElementById("myText").value;
     if(getpassword===PASSWORD){
         isOpen = !isOpen
         toggleDoor();
         if(isOpen==true){
-            var btn_opendoor = document.getElementById("btn_opendoor").innerText="Đóng cửa";
-            document.getElementById("demo").innerHTML = "Mở cửa thành công";
+            btn_opendoor.innerText="Đóng cửa";
+            notifi.innerHTML = "Mở cửa thành công";
         }else{
-            var btn_opendoor = document.getElementById("btn_opendoor").innerText="Mở cửa";
-            document.getElementById("demo").innerHTML = "Đóng cửa thành công";
+            btn_opendoor.innerText="Mở cửa";
+            notifi.innerHTML = "Đóng cửa thành công";
         }
     }else{
-        document.getElementById("demo").innerHTML = "Sai mật khẩu";
+        notifi.innerHTML = "Sai mật khẩu";
     }
 }

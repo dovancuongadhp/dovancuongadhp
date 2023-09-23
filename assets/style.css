@@ -1,6 +1,4 @@
 *{
-  font-size: 18px;
-  font-family: 'Courier New', Courier, monospace;
 }
 .wrapper{
     /* display: flex; */
@@ -20,6 +18,11 @@
 .text__alert{
   text-align: center;
 }
+#video_tiktok{
+  width: 200px;
+  height: 400px;
+}
+
 #btn_opendoor{
   background-color:rgb(230, 0, 65) ;
   color: white;
@@ -32,7 +35,7 @@
 .backDoor
 {
   /* background-color: #333; */
-  background: url('../img/heart_bg.png');
+  background: black;
   background-size: cover;
   background-repeat: no-repeat;
   position:relative;
